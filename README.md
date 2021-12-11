@@ -49,14 +49,20 @@ version `1.4.28` I'll break my old code. Running `pip install <library>` will in
 `/usr/bin/WhateverVersionOfPythonYouCurrentlyHave/site-packages/<library>`. How am I supposed to manage different versions of the same library on the same system?
 
 The answer is the *virtual environment*. A virtual environment is basically a fancy box that you create for each of your Python projects. From inside your application folder,
-create a new virtual environment by running `python -m venv .venv`. Then run `source .venv/bin/activate`. Now whenever you `pip install` a Python library, it'll live in
-`<your-application-folder>/.venv/Lib/site-packages` instead of globally in `/usr/bin/WhateverVersionOfPythonYouCurrentlyHave/site-packages/`, and when your code imports a 
-pip library, it will do so from `<your-application-folder>/.venv/Lib/site-packages` instead of `/usr/bin/WhateverVersionOfPythonYouCurrentlyHave/site-packages/`. Doing this with 
-every project lets them all live happy and separate lives, like neighbors with fences. When it's time to stop working on this project, just type `deactivate` and Python will
-go back to pulling its libraries from the global install location.
+create a new virtual environment by running `python3 -m venv .venv`. Then run `source .venv/bin/activate`. Now whenever you `pip install` a Python library, it'll live in
+`<your-application-folder>/.venv/Lib/site-packages` (the fancy box) instead of globally in `/usr/bin/WhateverVersionOfPythonYouCurrentlyHave/site-packages/`, and when your code 
+imports a pip library, it will do so from `<your-application-folder>/.venv/Lib/site-packages` instead of `/usr/bin/WhateverVersionOfPythonYouCurrentlyHave/site-packages/`. Doing 
+this with every project lets them all live happy and separate lives, like neighbors with fences. When it's time to stop working on this project, just type `deactivate` and 
+Python will go back to pulling its libraries from the global install location.
 
 ![Important meme](https://i.redd.it/lqy92av2z2521.jpg)
 
+Just to recap:
+- Create a virtual environment by:
+  - Opening a terminal in your `VanessaTestRepository` directory
+  - Creating a virtual environment folder with `python3 -m venv .venv`
+- Every time you work on this project, boot up the virtual environment by running `source .venv/bin/activate`
+- When you're done working on this project, deactivate the virtual environment by running `deactivate` 
 
 ## Running the tests
 
