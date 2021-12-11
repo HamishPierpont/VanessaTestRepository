@@ -83,7 +83,7 @@ things:
 6. Rerun the tests and watch your test pass.
 7. Run `black vanessatestrepository` from the root-level directory. This will lint your code and fix any formatting errors.
 8. Run `git commit -am "Some descriptive message of your changes to the code"`. This will add any modified files and commit them with that message.
-9. Run `git push origin --set-upstream <name of the branch your created>`. This will push your changes up to a remote branch on GitHub.
+9. Run `git push origin --set-upstream <name of the branch your created>`. This will create a remote branch on GitHub and push your changes up to that remote branch.
 
 
 ## Merging your code into `main`
@@ -93,4 +93,4 @@ corner and open a pull request there. It will prompt you for a description of yo
 and assign me as a reviewer in the top-right corner. I'll take a look and probably leave a comment on some piece of your code just so you can see what it looks like. Then I'll
 approve it, assuming that the automated check passes, and merge your code into main. 
 
-And that's it! Go gators?
+And that's it! Stroke your rapidly greying beard pensively and thank God that UBS will have a better setup than this.
