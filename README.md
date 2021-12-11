@@ -64,8 +64,33 @@ Just to recap:
 - Every time you work on this project, boot up the virtual environment by running `source .venv/bin/activate`
 - When you're done working on this project, deactivate the virtual environment by running `deactivate` 
 
+
 ## Running the tests
+Run `python3 -m vanessatestrepository`. This will execute `vanessatestrepository/__main__.py`, which will kick off a suite of tests written in
+`vanessatestrepository/tests/test_math.py`. This whole setup is actually really weird to me - for one example of weird behavior, delete the "unused" import of 
+`TestMathFunctions` and watch the test suite stop running. I based this setup off of
+[this tutorial](https://dev.to/codemouse92/dead-simple-python-project-structure-and-imports-38c6), as well as the 
+[docs for the `unittest` module](https://docs.python.org/3/library/unittest.html).
+
 
 ## Adding your own test
+First, make a branch for your changes. The way I normally name the branches is `username/brief-description-of-what-i-am-changing`. In your case, `vanessaeine/implement-and-test-division` would be good. You can make a branch and check that branch out in one fell swoop by running `git checkout -b vanessaeine/implement-and-test-division`. Then do these
+things:
+1. In `vanessatestrepository/src/math.py`, implement the outline of a `divide` function. Have it just return 0 for now.
+2. In `vanessatestrepository/tests/test_math.py`, implement a unit test for the divide function. You may need to use the `assertAlmostEqual` function, as floating-point division is prone to rounding errors.
+4. Run the test suite. Watch your newly-added test fail.
+5. Go back to `vanessatestrepository/src/math.py` and fix the code.
+6. Rerun the tests and watch your test pass.
+7. Run `black vanessatestrepository` from the root-level directory. This will lint your code and fix any formatting errors.
+8. Run `git commit -am "Some descriptive message of your changes to the code"`. This will add any modified files and commit them with that message.
+9. Run `git push origin --set-upstream <name of the branch your created>`. This will push your changes up to a remote branch on GitHub.
+
 
 ## Merging your code into `main`
+The last step in this process (yay!) is to open a *pull request* for your new branch to merge it back into `main`. Once you've made your changes and pushed them to GitHub,
+you might see a green button on the landing page for this repository that says "open pull request". If not, select your branch from the dropdown menu of branches in the top left
+corner and open a pull request there. It will prompt you for a description of your changes - put something there if you want, but it's not critical. Then open the pull request
+and assign me as a reviewer in the top-right corner. I'll take a look and probably leave a comment on some piece of your code just so you can see what it looks like. Then I'll
+approve it, assuming that the automated check passes, and merge your code into main. 
+
+And that's it! Go gators?
