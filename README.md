@@ -61,6 +61,7 @@ Just to recap:
 - Create a virtual environment by:
   - Opening a terminal in your `VanessaTestRepository` directory
   - Creating a virtual environment folder with `python3 -m venv .venv`
+- Install the libraries used by this project into the virtual environment by running `source .venv/bin/activate` to activate it and then `pip install -r requirements.txt` to do the actual installation
 - Every time you work on this project, boot up the virtual environment by running `source .venv/bin/activate`
 - When you're done working on this project, deactivate the virtual environment by running `deactivate` 
 
