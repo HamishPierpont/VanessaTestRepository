@@ -74,7 +74,7 @@ Run `python3 -m vanessatestrepository`. This will execute `vanessatestrepository
 
 
 ## Adding your own test
-First, make a branch for your changes. The way I normally name the branches is `username/brief-description-of-what-i-am-changing`. In your case, `vanessaeine/implement-and-test-division` would be good. You can make a branch and check that branch out in one fell swoop by running `git checkout -b vanessaeine/implement-and-test-division`. Then do these
+First, make a branch for your changes on your computer. The way I normally name the branches is `username/brief-description-of-what-i-am-changing`. In your case, `vanessaeine/implement-and-test-division` would be good. You can make a branch and check that branch out in one fell swoop by running `git checkout -b vanessaeine/implement-and-test-division`. Then do these
 things:
 1. In `vanessatestrepository/src/math.py`, implement the outline of a `divide` function. Have it just return 0 for now.
 2. In `vanessatestrepository/tests/test_math.py`, implement a unit test for the divide function. You may need to use the `assertAlmostEqual` function, as floating-point division is prone to rounding errors.
